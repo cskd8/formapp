@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Check | formapp.go</title>
+    </head>
+
+    <body>
+        <p>名前: {{ .Name }}</p>
+        <p>生年月日: {{ .Birthday }}</p>
+        <p>メッセージ</p>
+        <textarea readonly>{{ .Message }}</textarea>
+        <form action="/start_session" method="POST">
+            <input type="submit" value="submit">
+        </form>
+        <form action="/check_session" method="POST">
+            <input type="submit" value="back">
+        </form>
+    </body>
+
+</html>

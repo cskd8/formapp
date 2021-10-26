@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Name form | foamapp.go</title>
+    </head>
+    <body>
+        <form action="/birthday" method="POST">
+            <label for="name">名前: </label><input type="text" name="name" value="{{ .Name }}"></br>
+            <input type="hidden" name="name" value="{{ .Name }}">
+            <input type="hidden" name="birthday" value="{{ .Birthday }}">
+            <input type="hidden" name="message" value="{{ .Message }}">
+            <input type="submit" value="next">
+        </form>
+    </body>
+</html>

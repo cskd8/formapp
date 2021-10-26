@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Birthday form | foamapp.go</title>
+    </head>
+
+    <body>
+        <form action="/message_session" method="POST">
+            <label for="birthday">生年月日: </label><input type="date" name="birthday" value="{{ .Birthday }}"></br>
+            <input type="submit" value="next">
+        </form>
+        <form action="/birthday_session" method="POST">
+            <input type="submit" value="back">
+        </form>
+    </body>
+
+</html>

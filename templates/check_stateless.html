@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Check | formapp.go</title>
+    </head>
+
+    <body>
+            <p>名前: {{ .Name }}</p>
+            <p>生年月日: {{ .Birthday }}</p>
+            <p>メッセージ</p>
+            <textarea readonly>{{ .Message }}</textarea>
+            <form action="/start" method="POST">
+                <input type="submit" value="submit">
+            </form>
+            <form action="/message" method="POST">
+                <input type="hidden" name="name" value="{{ .Name }}">
+                <input type="hidden" name="birthday" value="{{ .Birthday }}">
+                <input type="hidden" name="message" value="{{ .Message }}">
+                <input type="submit" value="back">
+            </form>
+    </body>
+
+</html>
